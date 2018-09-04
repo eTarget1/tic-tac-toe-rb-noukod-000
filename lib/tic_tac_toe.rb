@@ -181,12 +181,38 @@ end
 
 def over?(board)
   if won?(board) || full?(board) || draw?(board)
-    
+
 return true
+
+else
+
+return false
+
+end
+
+end
+
+def winner (board)
+  
+index = []
+  
+index = won?(board)
+  
+if index == false
+    
+return nil
   
 else
     
-return false
+if board[index[0]] == "X"
+      
+return "X"
+    
+else
+      
+return "O"
+    
+end
   
 end
 
