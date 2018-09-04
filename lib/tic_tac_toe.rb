@@ -54,27 +54,63 @@ end
 
 
 def turn (board)
- 
+
  puts "Please enter 1-9:"
-  
+
 num = gets.chomp
-  
+
 index = input_to_index(num)
-  
+
 if valid_move?(board, index) == true
-    
+
 move(board, index)
-   
+
 display_board(board)
+
+else
+
+turn(board)
+
+end
+
+end
+
+
+def turn_count(board)
+
+count = 0
+
+board.each do |play|
+  
+if play == "X" || play == "O"
+  
+count += 1
+  
+end
+
+end
+
+return count
+
+end
+
+
+
+def current_player(board)
+  
+count = turn_count(board)
+  
+if count % 2 == 0
+    
+return "X"
   
 else
     
-turn(board)
-  
-end
+return "O"
 
 end
 
+end
 
   def play(board)
   play = 0
