@@ -23,17 +23,18 @@ def input_to_index(user_input)
 end
 
 def move(board, index, current_player = "X")
- 
+
  board[index] = current_player
 end
 
 
-def position_taken?(board, location)
-  
-board[location] != " " && board[location] != ""
-
+def position_taken?(array, index)
+  if (array[index] == " " || array[index] == "" || array[index] == nil)
+    return false
+  else
+    return true
+  end
 end
-
 
 
   def play(board)
