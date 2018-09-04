@@ -23,8 +23,7 @@ def input_to_index(user_input)
 end
 
 def move(board, index, current_player = "X")
-
- board[index] = current_player
+  board[index] = current_player
 end
 
 
@@ -42,13 +41,13 @@ def valid_move?(board, index)
 
 if array[ind] == " " || array[ind] == ""  || array[ind] == nil
 
-return false
+  return false
 
-else
+  else
 
-return true
+    return true
 
-end
+  end
 
 end
 
@@ -63,30 +62,30 @@ index = input_to_index(num)
 
 if valid_move?(board, index) == true
 
-move(board, index)
+  move(board, index)
 
-display_board(board)
+  display_board(board)
 
 else
 
-turn(board)
+  turn(board)
 
-end
+  end
 
 end
 
 
 def turn_count(board)
 
-count = 0
+  count = 0
 
-board.each do |play|
+  board.each do |play|
 
 if play == "X" || play == "O"
 
-count += 1
+  count += 1
 
-end
+  end
 
 end
 
