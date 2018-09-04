@@ -89,7 +89,7 @@ if play == "X" || play == "O"
 
 end
 
-return count
+  return count
 
 end
 
@@ -97,24 +97,24 @@ end
 
 def current_player(board)
 
-count = turn_count(board)
+  count = turn_count(board)
 
-if count % 2 == 0
+  if count % 2 == 0
 
-return "X"
+    return "X"
 
-else
+  else
 
-return "O"
+    return "O"
 
-end
+  end
 
 end
 
 
 def won?(board)
 
-WIN_COMBINATIONS.each {|win_combination|
+  WIN_COMBINATIONS.each {|win_combination|
 
 # win_combination is a 3 element array of indexes that compose a win, [0,1,2]
 
@@ -125,7 +125,6 @@ win_index_1 = win_combination[0]
 win_index_2 = win_combination[1]
 
 win_index_3 = win_combination[2]
-
 
 
 position_1 = board[win_index_1] # load the value of the board at win_index_1
