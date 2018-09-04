@@ -171,48 +171,46 @@ return true
 
 elsif !won?(board) && !full?(board) || !won?(board)
 
-return false
+  return false
 
-end
+  end
 
 end
 
 def over?(board)
   if won?(board) || full?(board) || draw?(board)
-
 return true
 
-else
+  else
 
-return false
-
-end
+    return false
+  end
 
 end
 
 def winner (board)
 
-index = []
+  index = []
 
-index = won?(board)
+  index = won?(board)
 
-if index == false
+  if index == false
 
-return nil
+    return nil
 
-else
+  else
 
 if board[index[0]] == "X"
 
-return "X"
+  return "X"
 
-else
+  else
 
-return "O"
+    return "O"
 
-end
+    end
 
-end
+  end
 
 end
 
